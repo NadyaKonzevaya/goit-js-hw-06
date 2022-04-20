@@ -17,7 +17,7 @@
 const refs = {
     valueRef : document.querySelector("#value"),
     decrementBtnRef : document.querySelector('[data-action = "decrement"]'),
-    incrementBtnRef : document.querySelector('[data-action = "decrement"]'),
+    incrementBtnRef : document.querySelector('[data-action = "increment"]'),
 };
 
 let counterValue = 0;
@@ -29,7 +29,7 @@ const decrement = () => {
 
 
 const increment = () => {
-    counterValue -= 1;
+    counterValue += 1;
     refs.valueRef.textContent = counterValue;
 }
 
