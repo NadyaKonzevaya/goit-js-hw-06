@@ -14,11 +14,12 @@ const refs = {
 
 
 const onInputChange = () => {
-    if (refs.inputRef.value === "") {
-        refs.outputRef.textContent = "Anonymous";
-    } else {
-    refs.outputRef.textContent = refs.inputRef.value
-    }
+    refs.outputRef.textContent = (refs.inputRef.value) ? refs.inputRef.value : "Anonymous"; 
+    // if (refs.inputRef.value === "") {
+    //     refs.outputRef.textContent = "Anonymous";
+    // } else {
+    // refs.outputRef.textContent = refs.inputRef.value
+    // }
 }
 
 refs.inputRef.addEventListener("input", onInputChange);

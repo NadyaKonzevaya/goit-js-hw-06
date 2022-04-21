@@ -27,11 +27,11 @@
 const inputRef = document.querySelector("#validation-input");
 
 const onInputBlur = (event) => {
-    if (event.currentTarget.value.length !== Number(inputRef.dataset.length)) {
-        inputRef.classList.add("invalid");
-    } else {
-        inputRef.classList.replace("invalid", "valid");
-    }
+    const condition = event.currentTarget.value.length === Number(inputRef.dataset.length);
+        inputRef.classList.toggle("invalid", !condition);
+        inputRef.classList.toggle("valid", condition);
+
+    
 }
 
 inputRef.addEventListener("blur", onInputBlur);
